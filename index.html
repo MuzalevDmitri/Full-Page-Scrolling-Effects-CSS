@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="comtainer scrollto">
+        <div class="section">
+            <div class="content">
+                <h2>Section one</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, aspernatur similique aliquid eius amet dicta corporis placeat accusantium reiciendis repellendus. Iure quas veritatis illum, ullam dignissimos consequatur beatae id molestias?</p>
+<a href="#two">Next</a>
+            </div>
+        </div>
+        <div class="section scrollto" id="two">
+            <div class="content">
+                <h2>Section two</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, aspernatur similique aliquid eius amet dicta corporis placeat accusantium reiciendis repellendus. Iure quas veritatis illum, ullam dignissimos consequatur beatae id molestias?</p>
+                <a href="#three">Next</a>
+
+            </div>
+        </div>
+
+        <div class="section scrollto" id="three">
+            <div class="content" id="two">
+                <h2>Section three</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, aspernatur similique aliquid eius amet dicta corporis placeat accusantium reiciendis repellendus. Iure quas veritatis illum, ullam dignissimos consequatur beatae id molestias?</p>
+                <a href="#four">Next</a>
+
+            </div>
+        </div>
+
+        <div class="section scrollto" id="four">
+            <div class="content">
+                <h2>Section four</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, aspernatur similique aliquid eius amet dicta corporis placeat accusantium reiciendis repellendus. Iure quas veritatis illum, ullam dignissimos consequatur beatae id molestias?</p>
+                <a href="#five">Next</a>
+
+            </div>
+        </div>
+
+        <div class="section scrollto" id="five">
+            <div class="content">
+                <h2>Section five</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, aspernatur similique aliquid eius amet dicta corporis placeat accusantium reiciendis repellendus. Iure quas veritatis illum, ullam dignissimos consequatur beatae id molestias?</p>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script>
+$('.scrollto a').on('click', function() {
+
+let href = $(this).attr('href');
+
+$('html, body').animate({
+    scrollTop: $(href).offset().top
+}, {
+    duration: 1070,   // по умолчанию «400» 
+    easing: "linear" // по умолчанию «swing» 
+});
+
+return false;
+});
+    </script>
+</body>
+</html>
